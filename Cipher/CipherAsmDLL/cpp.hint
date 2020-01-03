@@ -1,0 +1,2 @@
+#define CIPHERASMDLL_API __declspec(dllexport)
+#define CIPHERASMDLL_API __declspec(dllimport)

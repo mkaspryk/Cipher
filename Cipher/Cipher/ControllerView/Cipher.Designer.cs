@@ -56,12 +56,14 @@
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.Encrypt = new System.Windows.Forms.Button();
             this.Decrypt = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.DLLTypeGroupBox.SuspendLayout();
             this.InputGroupBox.SuspendLayout();
             this.OutputGroupBox.SuspendLayout();
             this.logGroupBox.SuspendLayout();
             this.CipherTypeGroupBox.SuspendLayout();
             this.ActiveThreadsGroupBox.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // SentenceLabel
@@ -391,7 +393,7 @@
             // 
             // Encrypt
             // 
-            this.Encrypt.Location = new System.Drawing.Point(270, 207);
+            this.Encrypt.Location = new System.Drawing.Point(30, 33);
             this.Encrypt.Name = "Encrypt";
             this.Encrypt.Size = new System.Drawing.Size(150, 54);
             this.Encrypt.TabIndex = 18;
@@ -401,7 +403,7 @@
             // 
             // Decrypt
             // 
-            this.Decrypt.Location = new System.Drawing.Point(270, 284);
+            this.Decrypt.Location = new System.Drawing.Point(30, 108);
             this.Decrypt.Name = "Decrypt";
             this.Decrypt.Size = new System.Drawing.Size(150, 54);
             this.Decrypt.TabIndex = 19;
@@ -409,13 +411,23 @@
             this.Decrypt.UseVisualStyleBackColor = true;
             this.Decrypt.Click += new System.EventHandler(this.Decrypt_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.Encrypt);
+            this.groupBox1.Controls.Add(this.Decrypt);
+            this.groupBox1.Location = new System.Drawing.Point(248, 207);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 176);
+            this.groupBox1.TabIndex = 20;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Cipher Buttons";
+            // 
             // CipherForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(990, 425);
-            this.Controls.Add(this.Decrypt);
-            this.Controls.Add(this.Encrypt);
+            this.ClientSize = new System.Drawing.Size(907, 425);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.ActiveThreadsGroupBox);
             this.Controls.Add(this.CipherTypeGroupBox);
@@ -425,7 +437,7 @@
             this.Controls.Add(this.DLLTypeGroupBox);
             this.Name = "CipherForm";
             this.Text = "Cipher Military Program";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.Form_Load);
             this.DLLTypeGroupBox.ResumeLayout(false);
             this.DLLTypeGroupBox.PerformLayout();
             this.InputGroupBox.ResumeLayout(false);
@@ -438,6 +450,7 @@
             this.CipherTypeGroupBox.PerformLayout();
             this.ActiveThreadsGroupBox.ResumeLayout(false);
             this.ActiveThreadsGroupBox.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -471,6 +484,7 @@
         private System.Windows.Forms.RadioButton CaesarCipherRadioButton;
         private System.Windows.Forms.Button Encrypt;
         private System.Windows.Forms.Button Decrypt;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 

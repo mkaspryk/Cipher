@@ -1,7 +1,6 @@
-﻿  Stdafx.cpp
-  AssemblyInfo.cpp
+﻿  Assembling Source.asm...
   CipherAsmDLL.cpp
+  dllmain.cpp
   Generating Code...
-  .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
-  AssemblyInfo.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  CipherAsmDLL.vcxproj -> E:\SEMESTR_5\JA\Cipher\x64\Debug\CipherAsmDLL.dll
+     Creating library ..\Cipher\bin\x64\Debug\CIPHERASMDLL.lib and object ..\Cipher\bin\x64\Debug\CIPHERASMDLL.exp
+  CipherAsmDLL.vcxproj -> E:\SEMESTR_5\JA\Cipher\CipherAsmDLL\..\Cipher\bin\x64\Debug\CIPHERASMDLL.dll

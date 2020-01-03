@@ -10,13 +10,6 @@
 #define CIPHERCPPDLL_API __declspec(dllimport)
 #endif
 
-// This class is exported from the dll
-class CIPHERCPPDLL_API CCipherCppDLL {
-public:
-	CCipherCppDLL(void);
-	// TODO: add your methods here.
-};
-
 extern "C" CIPHERCPPDLL_API void encryptCaesar(char* sentence1, int key1,char *buf);
 
 extern "C" CIPHERCPPDLL_API void decryptCaesar(char* sentence1, int key1, char *buf);
@@ -24,6 +17,3 @@ extern "C" CIPHERCPPDLL_API void decryptCaesar(char* sentence1, int key1, char *
 extern "C" CIPHERCPPDLL_API void encryptVigenere(char* sentence1, char* keyword1, char *buf);
 
 extern "C" CIPHERCPPDLL_API void decryptVigenere(char* sentence1, char* keyword1, char *buf);
-
-
-//CIPHERCPPDLL_API char* _cdecl decryptCaesar(char* sentence1, int key1);

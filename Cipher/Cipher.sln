@@ -5,9 +5,9 @@ VisualStudioVersion = 15.0.28307.960
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CipherGUI", "Cipher\CipherGUI.csproj", "{FE07CEA3-0017-4A94-8BA7-0600BBC71B2B}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CipherAsmDLL", "CipherAsmDLL\CipherAsmDLL.vcxproj", "{A050788F-F26E-48E8-AB6E-93D53A14A706}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CipherCppDLL", "CipherCppDLL\CipherCppDLL.vcxproj", "{998C1F39-A432-4EEE-BA5D-D08F0D65FC65}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CipherAsmDLL", "CipherAsmDLL\CipherAsmDLL.vcxproj", "{F7290B58-FB09-4A04-AFEE-F0C110843D43}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,16 +31,6 @@ Global
 		{FE07CEA3-0017-4A94-8BA7-0600BBC71B2B}.Release|x64.Build.0 = Release|x64
 		{FE07CEA3-0017-4A94-8BA7-0600BBC71B2B}.Release|x86.ActiveCfg = Release|Any CPU
 		{FE07CEA3-0017-4A94-8BA7-0600BBC71B2B}.Release|x86.Build.0 = Release|Any CPU
-		{A050788F-F26E-48E8-AB6E-93D53A14A706}.Debug|Any CPU.ActiveCfg = Debug|Win32
-		{A050788F-F26E-48E8-AB6E-93D53A14A706}.Debug|x64.ActiveCfg = Debug|x64
-		{A050788F-F26E-48E8-AB6E-93D53A14A706}.Debug|x64.Build.0 = Debug|x64
-		{A050788F-F26E-48E8-AB6E-93D53A14A706}.Debug|x86.ActiveCfg = Debug|Win32
-		{A050788F-F26E-48E8-AB6E-93D53A14A706}.Debug|x86.Build.0 = Debug|Win32
-		{A050788F-F26E-48E8-AB6E-93D53A14A706}.Release|Any CPU.ActiveCfg = Release|Win32
-		{A050788F-F26E-48E8-AB6E-93D53A14A706}.Release|x64.ActiveCfg = Release|x64
-		{A050788F-F26E-48E8-AB6E-93D53A14A706}.Release|x64.Build.0 = Release|x64
-		{A050788F-F26E-48E8-AB6E-93D53A14A706}.Release|x86.ActiveCfg = Release|Win32
-		{A050788F-F26E-48E8-AB6E-93D53A14A706}.Release|x86.Build.0 = Release|Win32
 		{998C1F39-A432-4EEE-BA5D-D08F0D65FC65}.Debug|Any CPU.ActiveCfg = Debug|Win32
 		{998C1F39-A432-4EEE-BA5D-D08F0D65FC65}.Debug|x64.ActiveCfg = Debug|x64
 		{998C1F39-A432-4EEE-BA5D-D08F0D65FC65}.Debug|x64.Build.0 = Debug|x64
@@ -51,6 +41,16 @@ Global
 		{998C1F39-A432-4EEE-BA5D-D08F0D65FC65}.Release|x64.Build.0 = Release|x64
 		{998C1F39-A432-4EEE-BA5D-D08F0D65FC65}.Release|x86.ActiveCfg = Release|Win32
 		{998C1F39-A432-4EEE-BA5D-D08F0D65FC65}.Release|x86.Build.0 = Release|Win32
+		{F7290B58-FB09-4A04-AFEE-F0C110843D43}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{F7290B58-FB09-4A04-AFEE-F0C110843D43}.Debug|x64.ActiveCfg = Debug|x64
+		{F7290B58-FB09-4A04-AFEE-F0C110843D43}.Debug|x64.Build.0 = Debug|x64
+		{F7290B58-FB09-4A04-AFEE-F0C110843D43}.Debug|x86.ActiveCfg = Debug|Win32
+		{F7290B58-FB09-4A04-AFEE-F0C110843D43}.Debug|x86.Build.0 = Debug|Win32
+		{F7290B58-FB09-4A04-AFEE-F0C110843D43}.Release|Any CPU.ActiveCfg = Release|Win32
+		{F7290B58-FB09-4A04-AFEE-F0C110843D43}.Release|x64.ActiveCfg = Release|x64
+		{F7290B58-FB09-4A04-AFEE-F0C110843D43}.Release|x64.Build.0 = Release|x64
+		{F7290B58-FB09-4A04-AFEE-F0C110843D43}.Release|x86.ActiveCfg = Release|Win32
+		{F7290B58-FB09-4A04-AFEE-F0C110843D43}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -73,6 +73,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <TargetName>CIPHERCPPDLL</TargetName>
     <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\Cipher\bin\x64\Debug\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <TargetName>CIPHERCPPDLL</TargetName>
@@ -85,6 +86,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <TargetName>CIPHERCPPDLL</TargetName>
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\Cipher\bin\x64\Release\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>

@@ -8,12 +8,6 @@
 #include "CipherCppClass\Vigenere.h"
 #include "CipherCppClass\Vigenere.cpp"
 
-// This is the constructor of a class that has been exported.
-CCipherCppDLL::CCipherCppDLL()
-{
-	return;
-}
-
 extern "C" CIPHERCPPDLL_API void encryptCaesar(char* sentence1, int key1, char *buf){
 
 	Caesar C(sentence1, key1);

@@ -1,0 +1,7 @@
+LIBRARY CipherAsmDLL
+EXPORTS
+encryptCaesarAsm
+decryptCaesarAsm
+encryptVigenereAsm
+decryptVigenereAsm
+

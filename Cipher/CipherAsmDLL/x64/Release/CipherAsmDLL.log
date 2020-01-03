@@ -1,0 +1,6 @@
+﻿  Assembling Source.asm...
+     Creating library ..\Cipher\bin\x64\Release\CIPHERASMDLL.lib and object ..\Cipher\bin\x64\Release\CIPHERASMDLL.exp
+  Generating code
+  All 5 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  CipherAsmDLL.vcxproj -> E:\SEMESTR_5\JA\Cipher\CipherAsmDLL\..\Cipher\bin\x64\Release\CIPHERASMDLL.dll
