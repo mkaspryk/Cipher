@@ -1,5 +1,4 @@
-﻿//using Cipher.Model;
-using Cipher.Model;
+﻿using Cipher.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,14 +18,22 @@ namespace Cipher
         Thread[] arrayOfThreads;
         object[] arrayOfArguments;
         public byte[] sentence;
-
         readonly CipherModel model = new CipherModel();
 
+        /// <summary>
+        ///  
+        /// </summary>
         public CipherForm()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <param name="sender">  </param>
+        /// <param name="e">  </param>
+        /// <returns> void </returns>
         private void Form_Load(object sender, EventArgs e)
         {
             model.countCores(CoresLabel);
@@ -40,16 +47,25 @@ namespace Cipher
             }
         }
 
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <param name="sender">  </param>
+        /// <param name="e">  </param>
+        /// <returns> void </returns>
         private void Encrypt_Click(object sender, EventArgs e)
         {
             bool encrypt = true;
             bool decrypt = false;
             try
             {
-                managerDLL(encrypt, decrypt, model.returnSelectedItem(ActiveThreadsComboBox));
-                model.stopChrono();
-                ResultTextBox.Text = System.Text.Encoding.ASCII.GetString(sentence);
-                logTextBox.Text = ("Encryption/Decryption time " + model.getChrono() + "ms");
+                bool result = managerDLL(encrypt, decrypt, model.returnSelectedItem(ActiveThreadsComboBox));
+                if (result)
+                {
+                    model.stopChrono();
+                    ResultTextBox.Text = System.Text.Encoding.ASCII.GetString(sentence);
+                    logTextBox.Text = ("Encryption/Decryption time " + model.getChrono() + "ms");
+                }
             }
             catch (Exception exe)
             {
@@ -57,39 +73,84 @@ namespace Cipher
             }
         }
 
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <param name="sender">  </param>
+        /// <param name="e">  </param>
+        /// <returns> void </returns>
         private void Decrypt_Click(object sender, EventArgs e)
         {
             bool encrypt = false;
             bool decrypt = true;
             try
             {
-                managerDLL(encrypt, decrypt, model.returnSelectedItem(ActiveThreadsComboBox));
-                model.stopChrono();
-                ResultTextBox.Text = System.Text.Encoding.ASCII.GetString(sentence);
-                logTextBox.Text = ("Encryption/Decryption time " + model.getChrono() + "ms");
+                bool result = managerDLL(encrypt, decrypt, model.returnSelectedItem(ActiveThreadsComboBox));
+                if (result)
+                {
+                    model.stopChrono();
+                    ResultTextBox.Text = System.Text.Encoding.ASCII.GetString(sentence);
+                    logTextBox.Text = ("Encryption/Decryption time " + model.getChrono() + "ms");
+                }
             }
             catch (Exception exe)
             {
                 MessageBox.Show(exe.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
-        public void managerDLL(bool encrypt, bool decrypt, int threads)
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <param name="encrypt">  </param>
+        /// <param name="decrypt">  </param>
+        /// <param name="threads">  </param>
+        /// <returns> bool </returns>
+        public bool managerDLL(bool encrypt, bool decrypt, int threads)
         {
             int select = selectDLL(encrypt, decrypt);
+            if (select % 2 != 0)
+            {
+                if (!model.isAlphabetic(ShiftPasswordTextBox.Text))
+                {
+                    MessageBox.Show("Not alfabetic password!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
+            else
+            {
+                int keyInt;
+                if (!Int32.TryParse(ShiftPasswordTextBox.Text, out keyInt))
+                {
+                    MessageBox.Show("Invalid shift (only numbers)!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+                if (keyInt > 26 || keyInt < 0)
+                {
+                    MessageBox.Show("Wrong shift range (correct range 0-26) !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
             prepareTasks(threads, select);
             createThreads();
             waitForThreads();
+            return true;
         }
 
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <param name="threads">  </param>
+        /// <param name="select">  </param>
+        /// <returns> void </returns>
         public void prepareTasks(int threads, int select)
         {
             int indexStart;
             int indexStop;
             int size = SentenceTextBox.TextLength;
             sentence = new byte[size];
-            sentence = Encoding.ASCII.GetBytes(SentenceTextBox.Text);
+            string sentenceUpper = SentenceTextBox.Text.ToUpper();
+            sentence = Encoding.ASCII.GetBytes(sentenceUpper);
             string key = ShiftPasswordTextBox.Text;
             if (size < 64)
             {
@@ -148,6 +209,16 @@ namespace Cipher
             }
         }
 
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <param name="select">  </param>
+        /// <param name="i">  </param>
+        /// <param name="sentence">  </param>
+        /// <param name="key">  </param>
+        /// <param name="indexStart">  </param>
+        /// <param name="indexStop">  </param>
+        /// <returns> void </returns>
         public void prepareDelegate(int select, int i, byte[] sentence, string key, int indexStart, int indexStop)
         {
             arrayOfArguments[i] = new object[4] { sentence, key, indexStart, indexStop };
@@ -180,6 +251,12 @@ namespace Cipher
             }
         }
 
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <param name="encrypt">  </param>
+        /// <param name="decrypt">  </param>
+        /// <returns> int </returns>
         public int selectDLL(bool encrypt, bool decrypt)
         {
             if (encrypt)
@@ -218,6 +295,10 @@ namespace Cipher
             }
         }
 
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <returns> void </returns>
         public void createThreads()
         {
             if (arrayOfThreads == null)
@@ -239,6 +320,10 @@ namespace Cipher
             }
         }
 
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <returns> void </returns>
         public void waitForThreads()
         {
             if (arrayOfThreads == null)
@@ -254,54 +339,15 @@ namespace Cipher
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CaesarCipherRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
+        private void label1_Click(object sender, EventArgs e){}
+        private void textBox1_TextChanged(object sender, EventArgs e){}
+        private void label2_Click(object sender, EventArgs e){}
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e){}
+        private void groupBox1_Enter(object sender, EventArgs e){}
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e) {}
+        private void listBox1_SelectedIndexChanged_1(object sender, EventArgs e){}
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e){}
+        private void groupBox2_Enter(object sender, EventArgs e){}
+        private void CaesarCipherRadioButton_CheckedChanged(object sender, EventArgs e){}
     }
 }

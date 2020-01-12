@@ -2,56 +2,35 @@
 
 //--------------------------------------------------------
 
-Vigenere::Vigenere() {
-}
+Vigenere::Vigenere() {}
 
-Vigenere::Vigenere(std::string sentence1, std::string keyword1) {
-	orginalSentence = toUpper(sentence1);
-	keyword = toUpper(keyword1);
-}
+Vigenere::Vigenere(std::string sentence1, std::string keyword1):orginalSentence(sentence1), keyword(toUpper(keyword1)) {}
 
-Vigenere::~Vigenere() {
-}
+Vigenere::~Vigenere() {}
 
 //--------------------------------------------------------
 
-void Vigenere::setOrginalSentence(std::string sentence1) {
-	orginalSentence = toUpper(sentence1);
-}
+void Vigenere::setOrginalSentence(std::string sentence1) {orginalSentence = sentence1;}
 
-std::string Vigenere::getOrginalSentence() {
-	return orginalSentence;
-}
+std::string Vigenere::getOrginalSentence() {return orginalSentence;}
 
 //--------------------------------------------------------
 
-void Vigenere::setEncryptedSentence(std::string sentence1) {
-	encryptedSentence = toUpper(sentence1);
-}
+void Vigenere::setEncryptedSentence(std::string sentence1) {encryptedSentence = sentence1;}
 
-std::string Vigenere::getEncryptedSentence() {
-	return encryptedSentence;
-}
+std::string Vigenere::getEncryptedSentence() {return encryptedSentence;}
 
 //--------------------------------------------------------
 
-void Vigenere::setDecryptedSentence(std::string sentence1) {
-	decryptedSentence = toUpper(sentence1);
-}
+void Vigenere::setDecryptedSentence(std::string sentence1) { decryptedSentence = sentence1; }
 
-std::string Vigenere::getDecryptedSentence() {
-	return decryptedSentence;
-}
+std::string Vigenere::getDecryptedSentence() {return decryptedSentence;}
 
 //--------------------------------------------------------
 
-void Vigenere::setKeyword(std::string keyword1) {
-	keyword = toUpper(keyword1);
-}
+void Vigenere::setKeyword(std::string keyword1) {keyword = keyword1;}
 
-std::string Vigenere::getKeyword() {
-	return keyword;
-}
+std::string Vigenere::getKeyword() {return keyword;}
 
 //--------------------------------------------------------
 

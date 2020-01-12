@@ -1,6 +1,4 @@
 ﻿  Assembling Source.asm...
-  CipherAsmDLL.cpp
   dllmain.cpp
-  Generating Code...
      Creating library ..\Cipher\bin\x64\Debug\CIPHERASMDLL.lib and object ..\Cipher\bin\x64\Debug\CIPHERASMDLL.exp
   CipherAsmDLL.vcxproj -> E:\SEMESTR_5\JA\Cipher\CipherAsmDLL\..\Cipher\bin\x64\Debug\CIPHERASMDLL.dll

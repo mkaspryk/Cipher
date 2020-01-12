@@ -2,56 +2,35 @@
 
 //--------------------------------------------------------
 
-Caesar::Caesar()
-{}
+Caesar::Caesar(){}
 
-Caesar::Caesar(std::string sentence1, int key1) :key(key1)
-{
-	orginalSentence = toUpper(sentence1);
-}
+Caesar::Caesar(std::string sentence1, int key1) :key(key1),orginalSentence(sentence1){}
 
-Caesar::~Caesar()
-{}
+Caesar::~Caesar(){}
 
 //--------------------------------------------------------
 
-void Caesar::setKey(int key1) {
-	key = key1;
-}
+void Caesar::setKey(int key1) {key = key1;}
 
- int Caesar::getKey() {
-	return key;
-}
+ int Caesar::getKey() {return key;}
 
 //--------------------------------------------------------
 
-void Caesar::setOrginalSentence(std::string sentence1) {
-	orginalSentence = toUpper(sentence1);
-}
+void Caesar::setOrginalSentence(std::string sentence1) {orginalSentence = sentence1;}
 
-std::string Caesar::getOrginalSentence() {
-	return orginalSentence;
-}
+std::string Caesar::getOrginalSentence() {return orginalSentence;}
 
 //--------------------------------------------------------
 
-void Caesar::setEncryptedSentence(std::string sentence1) {
-	encryptedSentence = toUpper(sentence1);
-}
+void Caesar::setEncryptedSentence(std::string sentence1) {encryptedSentence = sentence1;}
 
-std::string Caesar::getEncryptedSentence() {
-	return encryptedSentence;
-}
+std::string Caesar::getEncryptedSentence() {return encryptedSentence;}
 
 //--------------------------------------------------------
 
-void Caesar::setDecryptedSentence(std::string sentence1) {
-	decryptedSentence = toUpper(sentence1);
-}
+void Caesar::setDecryptedSentence(std::string sentence1) {decryptedSentence = sentence1;}
 
-std::string Caesar::getDecryptedSentence() {
-	return decryptedSentence;
-}
+std::string Caesar::getDecryptedSentence() {return decryptedSentence;}
 
 //--------------------------------------------------------
 
@@ -101,11 +80,6 @@ int Caesar::checkSign(char sign) {
 		return 0;
 	else
 		return 1;
-}
-
-std::string Caesar::toUpper(std::string s) {
-	std::transform(s.begin(), s.end(), s.begin(), ::toupper);
-	return s;
 }
 
 //--------------------------------------------------------

@@ -10,10 +10,34 @@
 #define CIPHERCPPDLL_API __declspec(dllimport)
 #endif
 
+/**
+* DLL function encrypt Caesar
+* sentence1 - orginal sentence to encrypt
+* key1 - shift
+* buf - output (here is encrypted sentence)
+*/
 extern "C" CIPHERCPPDLL_API void encryptCaesar(char* sentence1, int key1,char *buf);
 
+/**
+* DLL function decrypt Caesar
+* sentence1 - orginal sentence to decrypt
+* key1 - shift
+* buf - output (here is decrypted sentence)
+*/
 extern "C" CIPHERCPPDLL_API void decryptCaesar(char* sentence1, int key1, char *buf);
 
+/**
+* DLL function encrypt Vigenere
+* sentence1 - orginal sentence to encrypt
+* keyword1 - alphabetic password
+* buf - output (here is encrypted sentence)
+*/
 extern "C" CIPHERCPPDLL_API void encryptVigenere(char* sentence1, char* keyword1, char *buf);
 
+/**
+* DLL function decrypt Vigenere
+* sentence1 - orginal sentence to encrypt
+* keyword1 - alphabetic password
+* buf - output (here is decrypted sentence)
+*/
 extern "C" CIPHERCPPDLL_API void decryptVigenere(char* sentence1, char* keyword1, char *buf);

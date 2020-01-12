@@ -349,7 +349,8 @@
             "60",
             "61",
             "62",
-            "63"});
+            "63",
+            "64"});
             this.ActiveThreadsComboBox.Location = new System.Drawing.Point(6, 37);
             this.ActiveThreadsComboBox.Name = "ActiveThreadsComboBox";
             this.ActiveThreadsComboBox.Size = new System.Drawing.Size(174, 24);
