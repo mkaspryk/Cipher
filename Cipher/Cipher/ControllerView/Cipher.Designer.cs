@@ -57,6 +57,9 @@
             this.Encrypt = new System.Windows.Forms.Button();
             this.Decrypt = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radioButtonSIMDNo = new System.Windows.Forms.RadioButton();
+            this.radioButtonSIMDYes = new System.Windows.Forms.RadioButton();
             this.DLLTypeGroupBox.SuspendLayout();
             this.InputGroupBox.SuspendLayout();
             this.OutputGroupBox.SuspendLayout();
@@ -64,6 +67,7 @@
             this.CipherTypeGroupBox.SuspendLayout();
             this.ActiveThreadsGroupBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // SentenceLabel
@@ -248,7 +252,7 @@
             this.ActiveThreadsGroupBox.Controls.Add(this.CoresTitleLabel);
             this.ActiveThreadsGroupBox.Controls.Add(this.PhysicalProcessorsTitleLabel);
             this.ActiveThreadsGroupBox.Controls.Add(this.LogicalProcessorsTitleLabel);
-            this.ActiveThreadsGroupBox.Location = new System.Drawing.Point(466, 229);
+            this.ActiveThreadsGroupBox.Location = new System.Drawing.Point(661, 230);
             this.ActiveThreadsGroupBox.Name = "ActiveThreadsGroupBox";
             this.ActiveThreadsGroupBox.Size = new System.Drawing.Size(224, 170);
             this.ActiveThreadsGroupBox.TabIndex = 16;
@@ -416,18 +420,53 @@
             // 
             this.groupBox1.Controls.Add(this.Encrypt);
             this.groupBox1.Controls.Add(this.Decrypt);
-            this.groupBox1.Location = new System.Drawing.Point(248, 207);
+            this.groupBox1.Location = new System.Drawing.Point(455, 230);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 176);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cipher Buttons";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.radioButtonSIMDNo);
+            this.groupBox2.Controls.Add(this.radioButtonSIMDYes);
+            this.groupBox2.Location = new System.Drawing.Point(234, 207);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(200, 100);
+            this.groupBox2.TabIndex = 20;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "SIMD";
+            // 
+            // radioButtonSIMDNo
+            // 
+            this.radioButtonSIMDNo.AutoSize = true;
+            this.radioButtonSIMDNo.Location = new System.Drawing.Point(9, 58);
+            this.radioButtonSIMDNo.Name = "radioButtonSIMDNo";
+            this.radioButtonSIMDNo.Size = new System.Drawing.Size(47, 21);
+            this.radioButtonSIMDNo.TabIndex = 19;
+            this.radioButtonSIMDNo.TabStop = true;
+            this.radioButtonSIMDNo.Text = "No";
+            this.radioButtonSIMDNo.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonSIMDYes
+            // 
+            this.radioButtonSIMDYes.AutoSize = true;
+            this.radioButtonSIMDYes.Checked = true;
+            this.radioButtonSIMDYes.Location = new System.Drawing.Point(9, 31);
+            this.radioButtonSIMDYes.Name = "radioButtonSIMDYes";
+            this.radioButtonSIMDYes.Size = new System.Drawing.Size(53, 21);
+            this.radioButtonSIMDYes.TabIndex = 18;
+            this.radioButtonSIMDYes.TabStop = true;
+            this.radioButtonSIMDYes.Text = "Yes";
+            this.radioButtonSIMDYes.UseVisualStyleBackColor = true;
+            // 
             // CipherForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(907, 425);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.ActiveThreadsGroupBox);
@@ -452,6 +491,8 @@
             this.ActiveThreadsGroupBox.ResumeLayout(false);
             this.ActiveThreadsGroupBox.PerformLayout();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -486,6 +527,9 @@
         private System.Windows.Forms.Button Encrypt;
         private System.Windows.Forms.Button Decrypt;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton radioButtonSIMDNo;
+        private System.Windows.Forms.RadioButton radioButtonSIMDYes;
     }
 }
 
