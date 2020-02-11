@@ -1,0 +1,4 @@
+<map id="Cipher.Model.CipherModel.encryptVigenereAsmSIMD" name="Cipher.Model.CipherModel.encryptVigenereAsmSIMD">
+<area shape="rect" id="node1" title="Method prepares variables for DLL function" alt="" coords="5,5,227,47"/>
+<area shape="rect" id="node2" href="$class_cipher_1_1_model_1_1_cipher_model.html#a22fb045858f3d8053255b8de32f5a16f" title="[DLL] ASM Method &quot;encrypt&quot; Vigenere Cipher uses SIMD instructions" alt="" coords="275,5,496,47"/>
+</map>

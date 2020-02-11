@@ -1,0 +1,8 @@
+<map id="Cipher.CipherForm.managerDLL" name="Cipher.CipherForm.managerDLL">
+<area shape="rect" id="node1" title="Method &quot;manager dll&quot; is an auxiliary method" alt="" coords="5,107,212,134"/>
+<area shape="rect" id="node2" href="$class_cipher_1_1_cipher_form.html#a169c839693e27a6abdb8eb70ffc10e02" title="Method starts the threads" alt="" coords="271,5,441,47"/>
+<area shape="rect" id="node3" href="$class_cipher_1_1_cipher_form.html#aca0b9aa14d11f75493571a2b69e8c169" title="Method prepares the tasks of program" alt="" coords="267,71,445,112"/>
+<area shape="rect" id="node5" href="$class_cipher_1_1_cipher_form.html#a7f33e192136c53b2a2235da76b80c41c" title="Method is used to return chosen dll library" alt="" coords="260,137,452,163"/>
+<area shape="rect" id="node6" href="$class_cipher_1_1_cipher_form.html#af7df840bec62c75480a155348c453c60" title="Method waits for end of all threads" alt="" coords="268,188,444,229"/>
+<area shape="rect" id="node4" href="$class_cipher_1_1_cipher_form.html#ade0ad96a43c5870115ad3d99c49ad914" title="Method prepares delegates" alt="" coords="500,71,677,112"/>
+</map>

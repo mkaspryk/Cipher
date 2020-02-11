@@ -1,0 +1,11 @@
+E:\SEMESTR_5\Cipher\Cipher\Cipher\bin\x64\Debug\Cipher.exe.config
+E:\SEMESTR_5\Cipher\Cipher\Cipher\bin\x64\Debug\Cipher.exe
+E:\SEMESTR_5\Cipher\Cipher\Cipher\bin\x64\Debug\Cipher.pdb
+E:\SEMESTR_5\Cipher\Cipher\Cipher\bin\x64\Debug\System.Threading.Tasks.Dataflow.dll
+E:\SEMESTR_5\Cipher\Cipher\Cipher\obj\x64\Debug\Cipher.CipherForm.resources
+E:\SEMESTR_5\Cipher\Cipher\Cipher\obj\x64\Debug\Cipher.Properties.Resources.resources
+E:\SEMESTR_5\Cipher\Cipher\Cipher\obj\x64\Debug\CipherGUI.csproj.GenerateResource.cache
+E:\SEMESTR_5\Cipher\Cipher\Cipher\obj\x64\Debug\CipherGUI.csproj.CoreCompileInputs.cache
+E:\SEMESTR_5\Cipher\Cipher\Cipher\obj\x64\Debug\CipherGUI.csproj.CopyComplete
+E:\SEMESTR_5\Cipher\Cipher\Cipher\obj\x64\Debug\Cipher.exe
+E:\SEMESTR_5\Cipher\Cipher\Cipher\obj\x64\Debug\Cipher.pdb
