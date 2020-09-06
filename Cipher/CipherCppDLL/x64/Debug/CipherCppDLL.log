@@ -1,6 +1,0 @@
-﻿  pch.cpp
-  CipherCppDLL.cpp
-  dllmain.cpp
-  Generating Code...
-     Creating library ..\Cipher\bin\x64\Debug\CIPHERCPPDLL.lib and object ..\Cipher\bin\x64\Debug\CIPHERCPPDLL.exp
-  CipherCppDLL.vcxproj -> E:\SEMESTR_5\Cipher\Cipher\CipherCppDLL\..\Cipher\bin\x64\Debug\CIPHERCPPDLL.dll
